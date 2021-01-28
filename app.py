@@ -1,11 +1,17 @@
+import socket
 import os
 from flask import Flask
 app = Flask(__name__)
 
 @app.route("/")
 def main():
+    hostname = socket.gethostname()
+    ip = socket.gethostbyname(hostname)
+    
     color = os.environ.get('COLOR', "green") 
-    message = "Welcome !!! This is "+color+" environment" 
+    
+    message = "Welcome !!! This is "+{0}+" environment, hostname = {1}, IP = {2}".format(green, hostname, ip) 
+    
     return message
 
 @app.route('/how are you')
