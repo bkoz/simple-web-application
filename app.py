@@ -10,7 +10,7 @@ def main():
     
     color = os.environ.get('COLOR', "green") 
     
-    message = "Welcome !!! This is "+color+" environment, hostname = "+hostname+", IP = "+ip+" "
+    message = "Welcome to the "+color+" environment, hostname = "+hostname+", IP = "+ip+" "
     
     return message
 
